@@ -1,0 +1,110 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+
+.headerContainer {
+  background-color: $color-secondary;
+  padding-top: 10px;
+  height: 70px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuContainer {
+  margin-bottom: 8px !important;
+}
+.menuIcon {
+  color: $color-white;
+  font-size: $font-description;
+  cursor: pointer;
+}
+.menuIcon :hover {
+  color: $color-secondary-hover;
+}
+.logo {
+  position: relative;
+  width: 170px;
+  margin-right: auto !important;
+  cursor: pointer;
+}
+.logo img {
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+.logo div {
+  position: absolute;
+  top: 18px;
+  left: 47px;
+}
+.textColor {
+  color: $color-primary !important;
+  font-style: italic;
+}
+.drawerMenu {
+  position: relative;
+  height: 120vh;
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+.renderContainer {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 100%;
+}
+.iconSize {
+  font-size: $font-small;
+}
+.logoutButton {
+  color: $color-danger !important
+  ;
+}
+.langIcon {
+  color: $color-white;
+  font-size: $font-description;
+  cursor: pointer;
+}
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.logoContainer {
+  cursor: pointer;
+}
+.logoContainer img {
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+.tab {
+  width: 100px;
+  height: 80px;
+  position: relative;
+  background-color: $color-label;
+  cursor: pointer;
+  filter: drop-shadow(2px 1px 3px rgba(0, 0, 0, 0.5));
+}
+.arrow {
+  // width: 0;
+  // height: 0;
+  // border-left: 60px solid transparent;
+  // border-right: 60px solid transparent;
+  // border-top: 50px solid $color-label;
+  width: 100px;
+  height: 80px;
+  background-color: $color-label;
+  margin: 2rem;
+  position: absolute;
+  left: -23.1px;
+  bottom: -64px;
+  border-radius: 50%;
+}

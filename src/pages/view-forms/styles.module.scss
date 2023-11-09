@@ -1,0 +1,20 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+.container {
+}
+
+.headerContainer {
+  background-color: $color-primary;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  color: $color-white;
+}
+
+.menuIcon {
+  font-size: $font-normal;
+}
+
+.menuIcon:hover {
+  color: $color-light;
+}

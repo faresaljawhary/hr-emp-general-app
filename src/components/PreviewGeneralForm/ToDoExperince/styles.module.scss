@@ -1,0 +1,61 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+
+.threrInOneRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+
+.addButton {
+  margin-top: 20px;
+}
+.addButtonInvalidFrom {
+  margin-top: 55px;
+}
+.presentCheckBoxInvalidForrm {
+  position: absolute;
+  left: 1px;
+  bottom: -55px;
+}
+.endDateContainer {
+  position: relative;
+}
+.presentCheckBox {
+  position: absolute;
+  left: 1px;
+  bottom: -30px;
+}
+.cardsContainer {
+  margin-top: 10px !important;
+  margin-bottom: 50px !important;
+  gap: 20px;
+}
+.cardTitle {
+  text-align: center;
+}
+.cardContent {
+  background-color: $color-body-white;
+  width: 250px;
+}
+.cardContent p span {
+  font-weight: 700;
+}
+.toastConatiner {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 950px) {
+  .threrInOneRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .threrInOneRow div {
+    width: 200px;
+  }
+  .cardContent {
+    width: 100%;
+  }
+}

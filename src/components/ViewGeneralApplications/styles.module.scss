@@ -1,0 +1,89 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+
+.tableContainer {
+  margin: 50px auto auto auto;
+}
+.customTable div div ul {
+  float: left;
+  margin-right: 16px;
+}
+.customHeader {
+  text-align: center !important;
+}
+.popoverContainer {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.resetButton {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.filtersContent {
+  direction: rtl;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.filtersButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.applyFiltersButton,
+.searchButton {
+  background-color: $color-secondary !important;
+}
+.applyFiltersButton:hover,
+.searchButton:hover {
+  background-color: $color-secondary-hover !important;
+}
+.searchButton {
+  width: 50px !important;
+}
+.searchContainer {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto 20px auto;
+  gap: 20px;
+}
+.recordModal {
+  width: 1000px !important;
+}
+.modalTitle {
+  text-align: center;
+}
+.closeModalIcon {
+  margin-right: 20px;
+  color: $color-gray;
+}
+.header {
+  text-align: center;
+  font-size: $font-normal;
+}
+.paginationContainer {
+  margin-top: 15px;
+}
+.toastConatiner {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.filterAndResetButtons {
+  display: flex;
+}
+.buttonsTopTable {
+  display: flex;
+  justify-content: space-between;
+}

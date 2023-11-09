@@ -1,0 +1,56 @@
+{
+    "Gender": "M",
+    "Full_Name": "test test22",
+    "Birth_Date": "2023-11-08T08:08:59.104Z",
+    "Nationality": "Egypt",
+    "Birth_Place": "Jordan",
+    "Relegin": "test",
+    "Address_City": "Amman",
+    "Address_Street": "test",
+    "Address_Region": "test",
+    "Address_BuildingNo": "55",
+    "Address_Phone1": "799957997",
+    "National_Num": "32421111232",
+    "Work_Place": "Engineering and Maintenance",
+    "Demand_Position": "Maintenance Supervisor",
+    "Marriage_Status": "Married",
+    "Mother_Name": "fsdfsd",
+    "Degree_Type": "Associate's Degree",
+    "Major": "Electrical Engineering",
+    "University_Name": "Mutah University",
+    "GPA": "2.25",
+    "English_Proficiency": "Basic",
+    "Arabic_Proficiency": "Intermediate",
+    "Radio1": "No",
+    "Radio2": "No",
+    "Agree_Address": "Y",
+    "Agree_Info": "Y",
+    "Work_Experiences":[
+    {
+        "workplace": "test",
+        "position": "tet",
+        "startDate": "2023-01-01T07:54:34.674Z",
+        "endDate": "2023-08-01T07:54:36.058Z",
+        "salary": 22
+    },
+    {
+        "workplace": "test",
+        "position": "tet",
+        "startDate": "2024-05-01T08:30:33.188Z",
+        "endDate": "2024-08-01T08:30:34.754Z",
+        "salary": 22
+    },
+    {
+        "workplace": "test",
+        "position": "tet",
+        "startDate": "2026-05-01T08:31:01.417Z",
+        "endDate": null,
+        "salary": 22
+    }
+],
+    "Address_Phone2": null,
+    "Passport_Num": null,
+    "Explanation_Radio1": null,
+    "Explanation_Radio2": null,
+    "Explanation_Date_Radio2": null
+}

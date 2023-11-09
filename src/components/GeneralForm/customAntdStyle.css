@@ -1,0 +1,8 @@
+.ant-upload-list-item-actions a {
+  display: none;
+}
+@media screen and (max-width: 575px) {
+.css-dev-only-do-not-override-xu9wm8 .ant-steps.ant-steps-vertical {
+    display: none;
+  }
+}

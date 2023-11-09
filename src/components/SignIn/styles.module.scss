@@ -1,0 +1,117 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+
+.signinCard {
+  width: 400px;
+  height: 510px !important;
+  padding: 5px;
+  text-align: center;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.logoContainer img {
+  width: 200px;
+}
+
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.logoText {
+  color: $color-secondary !important; /* Set the text color as needed */
+  margin-top: 0;
+  font-style: italic;
+}
+
+.inputField {
+  width: 100%;
+  transition: border-color 0.3s;
+  height: 40px;
+  margin-top: 7px;
+}
+
+.inputField:focus,
+.inputField:active,
+.inputField:hover {
+  border-color: $color-secondary !important; /* Change the border color when focused or active (clicked inside) */
+}
+.signinBtn {
+  width: 100%;
+  transition: border-color 0.3s;
+  height: 40px;
+  margin-top: 7px;
+  background-color: $color-secondary;
+}
+.signinBtn:enabled:hover {
+  background-color: $color-secondary-hover !important;
+}
+// .loginContainer {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .loginBox {
+//   background: $color-white;
+//   padding: 20px;
+//   border-radius: 8px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+//   text-align: center;
+//   width: 400px;
+//   height: 450px;
+// }
+// .logo {
+//   position: relative;
+// }
+// .logo img {
+//   width: 180px;
+//   margin: 0 auto;
+// }
+// .logo p {
+//   font-size: $font-caption;
+//   font-style: italic;
+//   color: $color-secondary;
+//   font-weight: 700;
+//   position: absolute;
+//   width: 220px;
+//   bottom: -35px;
+//   left: 50%; /* Set the left position to the middle of the parent container */
+//   transform: translateX(-50%); /* Use transform to center the element */
+// }
+// .formContainer {
+//   margin-top: 40px !important;
+// }
+// .formGroup {
+//   margin: 20px 10px;
+// }
+
+// .signInButton {
+//   width: 100%;
+//   background-color: $color-secondary !important;
+// }
+
+// .errorText {
+//   color: $color-danger;
+//   font-size: 14px;
+//   margin-top: 4px;
+//   text-align: start;
+//   margin-left: 30px;
+// }
+// .visibilityIcon {
+//   cursor: pointer;
+//   color: $color-secondary;
+// }
+// .visibilityOffIcon {
+//   cursor: pointer;
+//   color: $color-gray !important;
+// }
+// .passwordInput input[type="password"]::-ms-reveal,
+// .passwordInput input[type="password"]::-ms-clear {
+//   display: none;
+// }

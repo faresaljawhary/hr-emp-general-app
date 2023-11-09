@@ -1,0 +1,9 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+.signinContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  background-color: $color-body-white;
+}

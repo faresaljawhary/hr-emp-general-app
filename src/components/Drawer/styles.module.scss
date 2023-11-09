@@ -1,0 +1,64 @@
+@import "/src/styles/fonts.scss";
+@import "/src/styles/variables.scss";
+.selectedTab {
+  background-color: $color-light-gray;
+}
+.logOutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.logOutBtnContent {
+  flex: 1;
+  text-align: center;
+}
+
+.buttonText {
+  margin-right: 8px; /* Adjust the spacing between the text and icon */
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+}
+
+.logoutIcon {
+  color: $color-white;
+}
+
+.headerContainer {
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.logo {
+  position: relative;
+  width: 170px;
+  margin-right: auto !important;
+  cursor: pointer;
+}
+.logo img {
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+.logo div {
+  position: absolute;
+  top: 18px;
+  left: 47px;
+}
+.textColor {
+  color: $color-primary !important;
+  font-style: italic;
+}
+.iconSize {
+  font-size: $font-title;
+}
+
+.tabFontSize span {
+  font-size: 1.5rem !important;
+  font-weight: 400;
+}

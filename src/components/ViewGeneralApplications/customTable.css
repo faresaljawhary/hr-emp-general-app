@@ -1,0 +1,17 @@
+.ant-table-thead th,td {
+  text-align: center !important; 
+}
+.ant-table-thead th,
+td {
+  text-align: center !important;
+}
+.ant-table-row{
+  cursor: pointer !important;
+}
+.ant-popover-inner{
+  margin-right: 70px !important;
+  direction: rtl;
+}
+.ant-table-wrapper .ant-table-pagination.ant-pagination{
+  direction: ltr;
+}
