@@ -349,6 +349,8 @@ const ViewGeneralApplications = () => {
     } finally {
       setLoading(false);
       window.location.href = "/view-forms";
+      window.location.href = "/view-forms";
+      window.location.href = "/view-forms";
       setDisableDownload(true);
       setSelectedRows([]);
     }
