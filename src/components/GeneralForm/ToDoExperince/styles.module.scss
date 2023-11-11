@@ -47,6 +47,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.cardAndCloseContainer{
+position: relative;
+}
+.closeIcon{
+  position: absolute;
+  top: -9px;
+  right: -5px;
+  z-index: 1;
+  color: red;
+  cursor: pointer;
+}
 @media screen and (max-width: 950px) {
   .threrInOneRow {
     display: flex;

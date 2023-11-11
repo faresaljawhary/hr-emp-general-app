@@ -10,7 +10,9 @@ import {
   Card,
   Checkbox,
 } from "antd";
+import { v4 as uuidv4 } from "uuid";
 import { FormattedMessage } from "react-intl";
+import { CloseCircleOutlined } from "@ant-design/icons"; 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./styles.module.scss";
@@ -23,6 +25,8 @@ const {
   cardTitle,
   cardContent,
   toastConatiner,
+  closeIcon,
+  cardAndCloseContainer
 } = styles;
 function ToDoPracticalExperiences({
   setWorkExperiences = () => {},
@@ -47,7 +51,11 @@ function ToDoPracticalExperiences({
       message: <FormattedMessage id="Please select end date" />,
     },
   ];
+  const deleteExperinceHandler=(id)=>{
+    const filterExperincess=experiences?.filter(el=>el?.id !== id);
+    setExperiences(filterExperincess);
 
+      }
   const handleAddExperience = () => {
     form
       .validateFields()
@@ -92,6 +100,7 @@ function ToDoPracticalExperiences({
         }
 
         const newExperience = {
+          id:uuidv4(),
           workplace: formData.workplace,
           position: formData.position,
           startDate: formData.startDate,
@@ -121,6 +130,7 @@ function ToDoPracticalExperiences({
     setWorkExperiences(experiences);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [experiences]);
+
   return (
     <>
       <ToastContainer
@@ -250,7 +260,9 @@ function ToDoPracticalExperiences({
       </Form>
       <Row className={cardsContainer}>
         {experiences?.map((item, index) => (
-          <Card
+          <div className={cardAndCloseContainer}>
+            <div className={closeIcon} onClick={()=>deleteExperinceHandler(item?.id)}><CloseCircleOutlined /></div>
+            <Card
             key={index}
             style={{ marginBottom: "10px" }}
             className={cardContent}
@@ -291,6 +303,7 @@ function ToDoPracticalExperiences({
               {item.salary}
             </p>
           </Card>
+          </div>
         ))}
       </Row>
     </>
