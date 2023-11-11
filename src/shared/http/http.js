@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: "https://hr-employment-general-api.onrender.com/api/v1",
-  timeout: 50000,
+  baseURL: "https://hr-employment-general-api.onrender.com/api/v1"
 });
 
 http.interceptors.request.use(

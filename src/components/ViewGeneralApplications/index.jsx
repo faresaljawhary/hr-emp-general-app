@@ -347,10 +347,10 @@ const ViewGeneralApplications = () => {
         autoClose: 3000,
       });
     } finally {
+      await fetchData();
+      await fetchData();
+      await fetchData();
       setLoading(false);
-      window.location.href = "/view-forms";
-      window.location.href = "/view-forms";
-      window.location.href = "/view-forms";
       setDisableDownload(true);
       setSelectedRows([]);
     }
