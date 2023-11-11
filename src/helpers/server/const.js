@@ -1,2 +1,2 @@
-export const serverPath = "http://localhost:4000/api/v1";
-export const serverName = "http://localhost:4000";
+export const serverPath = "https://hr-employment-general-api.onrender.com/api/v1";
+export const serverName = "https://hr-employment-general-api.onrender.com";
