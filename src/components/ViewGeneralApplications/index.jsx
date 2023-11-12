@@ -304,6 +304,8 @@ const ViewGeneralApplications = () => {
     }
   }, [selectedRows]);
   const handleDownload = async () => {
+    console.log(selectedRows);
+    // Log the data for selected rows
     const selectedData = data?.filter((record) =>
       selectedRows.includes(record?.UUID)
     );
@@ -313,44 +315,40 @@ const ViewGeneralApplications = () => {
     const attachmentFilesReshape = []
       .concat(...attachmentFilesToDownload)
       ?.map((el) => `${serverName}/download/${el}`);
+    console.log("Selected Data:", attachmentFilesReshape);
 
     try {
       setLoading(true);
-      const requestPromise = await http.put(
-        `${serverPath}/general/general-from`,
-        {
-          usersIds: selectedRows,
-        }
-      );
+      console.log("selectedRows", selectedRows);
 
-      // Mark the selected rows as downloaded in the local state
-      const updatedData = data.map((record) => {
-        if (selectedRows.includes(record?.UUID)) {
-          return { ...record, Download: true };
-        }
-        return record;
+      // Create promises for HTTP requests
+      const requestPromise = http.put(`${serverPath}/general/general-from`, {
+        usersIds: selectedRows,
       });
-      setData(updatedData);
 
       // Download files using the downloadjs library
-      attachmentFilesReshape?.forEach((fileUrl) => {
+      attachmentFilesReshape.forEach((fileUrl) => {
         download(fileUrl);
       });
 
+      // Wait for all HTTP requests to complete
       await Promise.all([requestPromise]);
 
+      // Show a success toast with a custom message
       toast.success(<FormattedMessage id="Download successful" />, {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 3000, // Auto-close the toast after 3 seconds
       });
     } catch (error) {
       console.error(error);
+      // Show an error toast
       toast.error(<FormattedMessage id="Download error" />, {
         position: "top-right",
         autoClose: 3000,
       });
     } finally {
       setLoading(false);
+      fetchData();
       setDisableDownload(true);
       setSelectedRows([]);
     }
