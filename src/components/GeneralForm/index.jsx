@@ -134,7 +134,6 @@ const GeneralForm = () => {
         const response = await http.get(
           `${serverPath}/general/general-from/duplicate/${value}`
         );
-        console.log(response?.data);
         if (response?.data?.isDuplicate) {
           toast.error(<FormattedMessage id="duplicateNationalNum" />, {
             position: toast.POSITION.TOP_CENTER,
@@ -1179,7 +1178,6 @@ const GeneralForm = () => {
       ...reshapedData
     } = formDataReshape;
 
-    console.log(reshapedData);
     const labelObjects = imageGroups?.map((group) => {
       return { ...group };
     });

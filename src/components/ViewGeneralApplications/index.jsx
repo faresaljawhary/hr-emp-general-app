@@ -86,7 +86,6 @@ const ViewGeneralApplications = () => {
   const { locale } = useLocale();
 
   const handleFilterChange = (name, value) => {
-    console.log(value);
     setFilters({ ...filters, [name]: value });
   };
   const toggleFilterPopover = () => {
@@ -304,7 +303,6 @@ const ViewGeneralApplications = () => {
     }
   }, [selectedRows]);
   const handleDownload = async () => {
-    console.log(selectedRows);
     // Log the data for selected rows
     const selectedData = data?.filter((record) =>
       selectedRows.includes(record?.UUID)
@@ -315,14 +313,12 @@ const ViewGeneralApplications = () => {
     const attachmentFilesReshape = []
       .concat(...attachmentFilesToDownload)
       ?.map((el) => `${serverName}/download/${el}`);
-    console.log("Selected Data:", attachmentFilesReshape);
 
     try {
       setLoading(true);
-      console.log("selectedRows", selectedRows);
 
       // Create promises for HTTP requests
-      const requestPromise = http.put(`${serverPath}/general/general-from`, {
+      const requestPromise =await http.put(`${serverPath}/general/general-from`, {
         usersIds: selectedRows,
       });
 
@@ -332,8 +328,10 @@ const ViewGeneralApplications = () => {
       });
 
       // Wait for all HTTP requests to complete
-      await Promise.all([requestPromise]);
-
+  
+      if(requestPromise?.status===200){
+        setData(requestPromise?.data?.records);
+      }
       // Show a success toast with a custom message
       toast.success(<FormattedMessage id="Download successful" />, {
         position: "top-right",
@@ -347,8 +345,8 @@ const ViewGeneralApplications = () => {
         autoClose: 3000,
       });
     } finally {
+ 
       setLoading(false);
-      fetchData();
       setDisableDownload(true);
       setSelectedRows([]);
     }
@@ -419,7 +417,6 @@ const ViewGeneralApplications = () => {
   ];
 
   const handleRowClick = async (record) => {
-    console.log(record);
     if (!popoverOpen) {
       setSelectedRowId(record.UUID);
       setUserData({
