@@ -322,9 +322,12 @@ const ViewGeneralApplications = () => {
       console.log("selectedRows", selectedRows);
 
       // Create promises for HTTP requests
-      const requestPromise = http.put(`${serverPath}/general/general-from`, {
-        usersIds: selectedRows,
-      });
+      const requestPromise = await http.put(
+        `${serverPath}/general/general-from`,
+        {
+          usersIds: selectedRows,
+        }
+      );
 
       // Download files using the downloadjs library
       attachmentFilesReshape.forEach((fileUrl) => {
@@ -347,8 +350,6 @@ const ViewGeneralApplications = () => {
         autoClose: 3000,
       });
     } finally {
-      await fetchData();
-      await fetchData();
       await fetchData();
       setLoading(false);
       setDisableDownload(true);
