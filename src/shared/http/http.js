@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: "https://api-general-form.onrender.com/api/v1",
+  baseURL: "https://api-general-hr.onrender.com/api/v1",
 });
 
 http.interceptors.request.use(

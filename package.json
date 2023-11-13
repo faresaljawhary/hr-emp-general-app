@@ -2,7 +2,7 @@
   "name": "hr-emp-general-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api-general-form.onrender.com",
+  "proxy": "https://api-general-hr.onrender.com",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@emotion/react": "^11.11.1",
