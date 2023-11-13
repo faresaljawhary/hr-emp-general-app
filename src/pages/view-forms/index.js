@@ -49,7 +49,6 @@ const ViewForms = () => {
       style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
     >
       <ApploggedInHeader />
-      <h1>jdfdsfs</h1>
     </div>
   );
 };
