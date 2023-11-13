@@ -332,8 +332,11 @@ const ViewGeneralApplications = () => {
       });
 
       // Wait for all HTTP requests to complete
-      await Promise.all([requestPromise]);
-
+      const resPromise= await Promise.all([requestPromise]);
+      
+      if(resPromise[0]?.status===200){
+        setData(resPromise[0]?.data?.records);
+      }
       // Show a success toast with a custom message
       toast.success(<FormattedMessage id="Download successful" />, {
         position: "top-right",
@@ -347,8 +350,8 @@ const ViewGeneralApplications = () => {
         autoClose: 3000,
       });
     } finally {
+ 
       setLoading(false);
-      fetchData();
       setDisableDownload(true);
       setSelectedRows([]);
     }

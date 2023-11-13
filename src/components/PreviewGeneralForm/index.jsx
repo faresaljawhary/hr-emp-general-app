@@ -88,7 +88,6 @@ const PreviewGeneralForm = ({
     Religion: "",
     OtherReligion: "",
   });
-  console.log("userAttachments", userAttachments);
   const { locale } = useLocale();
 
   useEffect(() => {
@@ -163,7 +162,6 @@ const PreviewGeneralForm = ({
   const handleRadioChange2 = (e) => {
     setShowExplanation2(e.target.value === "Yes");
   };
-  console.log("formData", formData);
   const formSteps = [
     {
       title: <FormattedMessage id="step 1" />,
