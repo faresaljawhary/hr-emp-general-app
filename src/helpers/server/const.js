@@ -1,2 +1,2 @@
-export const serverPath = "https://hr-employment-general-api.onrender.com/api/v1";
-export const serverName = "https://hr-employment-general-api.onrender.com";
+export const serverPath = "https://api-general-form.onrender.com/api/v1";
+export const serverName = "https://api-general-form.onrender.com";

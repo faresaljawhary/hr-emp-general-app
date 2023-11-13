@@ -1,2 +1,2 @@
-const serverUrl = "https://hr-employment-general-api.onrender.com/";
+const serverUrl = "https://api-general-form.onrender.com/";
 export default serverUrl;
